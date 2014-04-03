@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ERP_JOSEREIS.Models.Cliente>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Novo Cliente PF", "CreatePF")
+    @Html.ActionLink("Novo Cliente PJ", "CreatePJ")
+</p>
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Preferencial</th>
+    </tr>
+
+@foreach (var cliente in Model) {
+    <tr>
+        <td>
+            @cliente.pessoa.Nome
+        </td>
+        <td>
+            @cliente.preferencial
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = cliente.IdCliente }) |
+            @Html.ActionLink("Exibir", "Details", new { id = cliente.IdCliente }) |
+            @Html.ActionLink("Deletar", "Delete", new { id = cliente.IdCliente })
+        </td>
+    </tr>
+}
+
+</table>

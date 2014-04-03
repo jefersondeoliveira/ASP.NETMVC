@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Tabuada";
+}
+<h2>
+    Tabuada</h2>
+@{
+    int j;
+    for (int i = 0; i <= 10; i++)
+    {
+        j = ViewBag.num * i;
+        <p>@ViewBag.num *@i = @j</p>
+    }
+}
