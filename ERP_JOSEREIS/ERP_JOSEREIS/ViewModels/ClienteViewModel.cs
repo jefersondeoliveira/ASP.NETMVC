@@ -11,7 +11,6 @@ namespace ERP_JOSEREIS.ViewModels
         public Cliente Cliente { get; set; }
         public PessoaFisica PessoaFisica { get; set; }
         public PessoaJuridica PessoaJuridica { get; set; }
-
         public IList<Pessoa> Pessoas { get; set; }
 
         public ClienteViewModel(Cliente cliente, PessoaFisica pf)
@@ -19,11 +18,13 @@ namespace ERP_JOSEREIS.ViewModels
             PessoaFisica = pf;
             Cliente = cliente;
         }
+
         public ClienteViewModel(Cliente cliente, PessoaJuridica pj)
         {
             PessoaJuridica = pj;
             Cliente = cliente;
         }
+        
         public ClienteViewModel(IList<Pessoa> pessoas)
         {
             Pessoas = pessoas;

@@ -383,10 +383,16 @@
     <Content Include="Views\Teste\Tabuada3.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Cliente\ClientePF.cshtml" />
+    <Content Include="Views\Cliente\ClientePessoaFisica.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Cliente\ClientePJ.cshtml" />
+    <Content Include="Views\Cliente\ClientePessoaJuridica.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Cliente\DetalhaPessoaFisica.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Cliente\DetalhaPessoaJuridica.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -24,7 +24,7 @@ namespace ERP_JOSEREIS.Controllers
 
         public ActionResult Tabuada3()
         {
-            //retorna a View Tabuada3
+            //retorna a view Tabuada3
             return View();
         }
 

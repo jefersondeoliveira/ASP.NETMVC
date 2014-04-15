@@ -1,0 +1,112 @@
+﻿@model ERP_JOSEREIS.ViewModels.ClienteViewModel
+
+        
+        <div class="display-label">
+            @Html.LabelFor(model => model.PessoaFisica.DataNascimento)
+        </div>
+        <div class="display-label">
+            @Html.DisplayFor(model => model.PessoaFisica.DataNascimento)
+        </div>
+        <br />
+        <div class="display-label">
+            @Html.LabelFor(model => model.PessoaFisica.CPF)
+        </div>
+        <div class="display-label">
+            @Html.DisplayFor(model => model.PessoaFisica.CPF)
+        </div>
+        <br />
+        <div class="display-label">
+            @Html.LabelFor(model => model.PessoaFisica.TelefoneCelular)
+        </div>
+        <div class="display-label">
+            @Html.DisplayFor(model => model.PessoaFisica.TelefoneCelular)
+        </div>
+        <br />
+        <div class="display-label">
+            @Html.LabelFor(model => model.PessoaFisica.RG)
+        </div>
+        <div class="display-label">
+            @Html.DisplayFor(model => model.PessoaFisica.RG)
+        </div>
+        <br />
+        <div class="display-label">
+            @Html.LabelFor(model => model.PessoaFisica.Nome)
+        </div>
+        <div class="display-label">
+            @Html.DisplayFor(model => model.PessoaFisica.Nome)
+        </div>
+        <br />
+        <div class="display-label">
+            @Html.LabelFor(model => model.PessoaFisica.DataCadastro)
+        </div>
+        <div class="display-label">
+            @Html.DisplayFor(model => model.PessoaFisica.DataCadastro)
+        </div>
+        <br />
+        <div class="display-label">
+            @Html.LabelFor(model => model.PessoaFisica.Rua)
+        </div>
+        <div class="display-label">
+            @Html.DisplayFor(model => model.PessoaFisica.Rua)
+        </div>
+        <br />
+        <div class="display-label">
+            @Html.LabelFor(model => model.PessoaFisica.Numero)
+        </div>
+        <div class="display-label">
+            @Html.DisplayFor(model => model.PessoaFisica.Numero)
+        </div>
+        <br />
+        <div class="display-label">
+            @Html.LabelFor(model => model.PessoaFisica.Bairro)
+        </div>
+        <div class="display-label">
+            @Html.DisplayFor(model => model.PessoaFisica.Bairro)
+        </div>
+        <br />
+        <div class="display-label">
+            @Html.LabelFor(model => model.PessoaFisica.CEP)
+        </div>
+        <div class="display-label">
+            @Html.DisplayFor(model => model.PessoaFisica.CEP)
+        </div>
+        <br />
+        <div class="display-label">
+            @Html.LabelFor(model => model.PessoaFisica.TelefoneComercial)
+        </div>
+        <div class="display-label">
+            @Html.DisplayFor(model => model.PessoaFisica.TelefoneComercial)
+        </div>
+        <br />
+        <div class="display-label">
+            @Html.LabelFor(model => model.PessoaFisica.TelefoneResidencial)
+        </div>
+        <div class="display-label">
+            @Html.DisplayFor(model => model.PessoaFisica.TelefoneResidencial)
+        </div>
+        <br />
+        <div class="display-label">
+            @Html.LabelFor(model => model.PessoaFisica.Cidade.Nome, "Cidade")
+        </div>
+        <div class="display-label">
+            @Html.DisplayFor(model => model.PessoaFisica.Cidade.Nome, "Cidade")
+        </div>
+        <br />
+        <div class="display-label">
+            @Html.LabelFor(model => model.Cliente.Preferencial)
+        </div>
+        <div class="display-label">
+            @if (Model.Cliente.Preferencial == true)
+            {
+                <span>Sim</span>
+            }
+            else
+            {
+                <span>Não</span>
+            }             
+        </div>
+ 
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PessoaFisica.IdPessoa }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

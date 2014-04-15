@@ -10,7 +10,16 @@
 <fieldset>
     <legend>Cliente</legend>
 </fieldset>
-@using (Html.BeginForm()) {
+
+    <div class="display-label">
+        @Html.LabelFor(model => model.Pessoa.Nome)
+    </div>
+    <div class="display-label">
+        @Html.DisplayFor(model => model.Pessoa.Nome)
+    </div>
+
+@using (Html.BeginForm())
+{
     <p>
         <input type="submit" value="Delete" /> |
         @Html.ActionLink("Back to List", "Index")

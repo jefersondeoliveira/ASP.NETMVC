@@ -1,11 +1,10 @@
 ﻿@model ERP_JOSEREIS.ViewModels.ClienteViewModel
 
-
 <script src="~/Scripts/jquery-1.7.1.min.js"></script>
 <script src="~/Scripts/jquery.validate.min.js"></script>
 <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 
-@using (Html.BeginForm("EditPF","Cliente")) {
+@using (Html.BeginForm("EditPF", "Cliente")) {
     @Html.ValidationSummary(true)
 
     <fieldset>
@@ -85,15 +84,6 @@
             @Html.ValidationMessageFor(model => model.PessoaFisica.Bairro)
         </div>
 
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.PessoaFisica.IdCidade, "Cidade")
-        </div>
-        <div class="editor-field">
-            @Html.DropDownList("IdCidade", String.Empty)
-            @Html.ValidationMessageFor(model => model.PessoaFisica.IdCidade)
-        </div>
-
         <div class="editor-label">
             @Html.LabelFor(model => model.PessoaFisica.CEP)
         </div>
@@ -119,22 +109,24 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Cliente.IdCliente)
-        </div>
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Cliente.preferencial)
+            @Html.LabelFor(model => model.PessoaFisica.IdCidade, "Cidade")
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Cliente.preferencial)
-            @Html.ValidationMessageFor(model => model.Cliente.preferencial)
+            @Html.DropDownList("IdCidade", String.Empty)
+            @Html.ValidationMessageFor(model => model.PessoaFisica.IdCidade)
         </div>
 
+        @Html.HiddenFor(model => model.Cliente.IdCliente)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Cliente.Preferencial)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Cliente.Preferencial)
+            @Html.ValidationMessageFor(model => model.Cliente.Preferencial)
+        </div>
         <p>
             <input type="submit" value="Save" />
         </p>
     </fieldset>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>

@@ -12,7 +12,7 @@ namespace ERP_JOSEREIS.Models
         [Key]
         public int IdCliente { get; set; }
         [ForeignKey("IdCliente")]
-        public Pessoa pessoa { get; set; }
-        public bool preferencial { get; set; }
+        public Pessoa Pessoa { get; set; }
+        public bool Preferencial { get; set; }
     }
 }

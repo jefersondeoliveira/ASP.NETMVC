@@ -6,7 +6,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ERP_JOSEREIS.Models;
-using ERP_JOSEREIS.ViewModels;
 
 namespace ERP_JOSEREIS.Controllers
 {
@@ -29,7 +28,7 @@ namespace ERP_JOSEREIS.Controllers
         public ActionResult Details(int id = 0)
         {
             Cidade cidade = db.Cidades.Include(c => c.Estado).
-                SingleOrDefault(c => c.IdCidade == id);
+                SingleOrDefault(c=> c.IdCidade == id);
             if (cidade == null)
             {
                 return HttpNotFound();
@@ -69,12 +68,10 @@ namespace ERP_JOSEREIS.Controllers
         public ActionResult Edit(int id = 0)
         {
             Cidade cidade = db.Cidades.Find(id);
-                       
             if (cidade == null)
             {
                 return HttpNotFound();
             }
-            
             ViewBag.IdEstado = new SelectList(db.Estados, "IdEstado", "Nome", cidade.IdEstado);
             return View(cidade);
         }

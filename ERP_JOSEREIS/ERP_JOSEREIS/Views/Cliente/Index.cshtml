@@ -7,27 +7,28 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Novo Cliente PF", "CreatePF")
+    @Html.ActionLink("Novo Cliente PF", "CreatePF") |
     @Html.ActionLink("Novo Cliente PJ", "CreatePJ")
 </p>
 <table>
     <tr>
         <th>Nome</th>
         <th>Preferencial</th>
+        <th></th>
     </tr>
 
 @foreach (var cliente in Model) {
     <tr>
         <td>
-            @cliente.pessoa.Nome
+            @cliente.Pessoa.Nome
         </td>
         <td>
-            @cliente.preferencial
+            @cliente.Preferencial
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id = cliente.IdCliente }) |
+            @Html.ActionLink("Editar", "Edit", new { id = cliente.IdCliente}) |
             @Html.ActionLink("Exibir", "Details", new { id = cliente.IdCliente }) |
-            @Html.ActionLink("Deletar", "Delete", new { id = cliente.IdCliente })
+            @Html.ActionLink("Excluir", "Delete", new { id = cliente.Pessoa.IdPessoa })
         </td>
     </tr>
 }
